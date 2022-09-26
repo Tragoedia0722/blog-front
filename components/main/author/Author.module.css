@@ -1,0 +1,22 @@
+.author {
+    text-align: center;
+    padding: 1rem;
+    background-color: #FFF;
+    border: 1px solid #eee;
+    border-radius: .3rem;
+}
+
+.author div {
+    margin-bottom: 1rem;
+}
+
+.info {
+    font-size: 1rem;
+    color: #999;
+}
+
+.account {
+    background-color: #999;
+    margin-left: .5rem;
+    margin-right: .5rem;
+}

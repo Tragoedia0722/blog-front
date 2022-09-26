@@ -1,6 +1,8 @@
 import React from 'react';
 import classes from "./Main.module.css";
 import {Col, Row} from "antd";
+import Author from "./author/Author";
+import Advert from "./advert/Advert";
 
 const Main = (props) => {
     return (
@@ -10,7 +12,16 @@ const Main = (props) => {
                     {props.left}
                 </Col>
                 <Col className={classes.right} xs={0} sm={0} md={7} lg={5} xl={4}>
-                    {props.right}
+                    <Author/>
+                    <Advert advert={
+                        <div>杭州男士求脱单，详细加Q 1050469929</div>
+                    }/>
+                    <Advert advert={
+                        <div>广告位招租</div>
+                    }/>
+                    <Advert advert={
+                        <div>广告位招租</div>
+                    }/>
                 </Col>
             </Row>
         </div>

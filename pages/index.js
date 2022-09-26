@@ -2,9 +2,10 @@ import React, {useState} from 'react'
 import Head from 'next/head'
 import Header from "../components/header/Header";
 import Main from "../components/main/Main"
-import {List} from "antd";
+import {Breadcrumb, List} from "antd";
 import classes from "../components/main/Main.module.css";
 import {CalendarOutlined, FolderOutlined} from "@ant-design/icons";
+import Footer from "../components/footer/Footer";
 
 const Home = () => {
     const [dataSource, setDataSource] = useState([
@@ -41,30 +42,36 @@ const Home = () => {
         ]
     )
 
-    const left = <List
-        itemLayout={"vertical"}
-        dataSource={dataSource}
-        renderItem={item => (
-            <List.Item>
-                <div className={classes.title}>{item.title}</div>
-                <div className={classes.icon}>
+    const left = (
+        <>
+            <div>
+                <Breadcrumb>
+                    <Breadcrumb.Item><a href={"/"}>首页</a></Breadcrumb.Item>
+                    <Breadcrumb.Item><span>文章</span></Breadcrumb.Item>
+                </Breadcrumb>
+            </div>
+            <List
+                itemLayout={"vertical"}
+                dataSource={dataSource}
+                renderItem={item => (
+                    <List.Item>
+                        <div className={classes.title}>{item.title}</div>
+                        <div className={classes.icon}>
                     <span>
                         <CalendarOutlined/>&nbsp;{item.date}
                     </span>
-                    &nbsp;&nbsp;
-                    <span>
+                            &nbsp;&nbsp;
+                            <span>
                         <FolderOutlined/>&nbsp;{item.type}
                     </span>
-                </div>
-                <div className={classes.context}>
-                    {item.context}
-                </div>
-            </List.Item>
-        )}/>
-
-    const right = <div>
-
-    </div>
+                        </div>
+                        <div className={classes.context}>
+                            {item.context}
+                        </div>
+                    </List.Item>
+                )}/>
+        </>
+    )
 
     return (
         <>
@@ -73,7 +80,8 @@ const Home = () => {
             </Head>
 
             <Header/>
-            <Main left={left} right={right}/>
+            <Main left={left}/>
+            <Footer/>
         </>
     )
 }
