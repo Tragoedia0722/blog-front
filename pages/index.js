@@ -6,6 +6,8 @@ import {Breadcrumb, List} from "antd";
 import classes from "../components/main/Main.module.css";
 import {CalendarOutlined, FolderOutlined} from "@ant-design/icons";
 import Footer from "../components/footer/Footer";
+import Author from "../components/main/author/Author";
+import Advert from "../components/main/advert/Advert";
 
 const Home = () => {
     const [dataSource, setDataSource] = useState([
@@ -55,7 +57,7 @@ const Home = () => {
                 dataSource={dataSource}
                 renderItem={item => (
                     <List.Item>
-                        <div className={classes.title}>{item.title}</div>
+                        <div className={classes.title}><a href={"/detail"}>{item.title}</a></div>
                         <div className={classes.icon}>
                     <span>
                         <CalendarOutlined/>&nbsp;{item.date}
@@ -73,6 +75,13 @@ const Home = () => {
         </>
     )
 
+    const right = (
+        <>
+            <Author/>
+            <Advert/>
+        </>
+    )
+
     return (
         <>
             <Head>
@@ -80,7 +89,7 @@ const Home = () => {
             </Head>
 
             <Header/>
-            <Main left={left}/>
+            <Main left={left} right={right}/>
             <Footer/>
         </>
     )

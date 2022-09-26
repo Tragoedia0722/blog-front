@@ -1,5 +1,8 @@
 .advert {
     text-align: center;
+}
+
+.item {
     margin-top: .5rem;
     padding: 1rem;
     background-color: #FFF;
