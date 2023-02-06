@@ -2,7 +2,10 @@ import React from 'react';
 import classes from "./Main.module.css";
 import {Col, Row} from "antd";
 
+
 const Main = (props) => {
+
+
     return (
         <div>
             <Row className={classes.main} type={"flex"} justify="center">

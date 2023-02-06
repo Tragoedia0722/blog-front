@@ -1,9 +1,13 @@
 .header {
-    background-color: #ffffff;
-    padding: .4rem;
+    background-color: #FFFFFF;
+    align-items: center;
     overflow: hidden;
-    height: 3.2rem;
+    height: 2.8rem;
     border-bottom: 1px solid #cccccc;
+}
+
+.info {
+    line-height: 2.8rem;
 }
 
 .logo {
@@ -17,4 +21,13 @@
     color: #999999;
     display: inline-block;
     padding-left: .3rem;
+}
+
+.menu {
+    line-height: 2.8rem;
+    border: none;
+}
+
+.menu span {
+    margin: .2rem;
 }

@@ -13,7 +13,9 @@ const Author = () => {
                 />
             </div>
             <div className={classes.info}>
-                特拉戈特拉戈特拉戈
+                特拉戈
+                <p>Tragoedia</p>
+                <div>后端开发程序员，记录工作、学习、生活。</div>
                 <Divider>社交账号</Divider>
                 <Avatar size={28} icon={<GithubOutlined/>} className={classes.account}/>
                 <Avatar size={28} icon={<QqOutlined/>} className={classes.account}/>

@@ -1,36 +1,67 @@
 import React from 'react';
 import classes from "./Header.module.css";
 import {Col, Menu, Row} from "antd";
-import {HomeOutlined} from "@ant-design/icons"
+import {BulbOutlined, CameraOutlined, SmileOutlined} from "@ant-design/icons"
+import Link from "next/link";
 
 const Header = () => {
     const items = [
         {
-            key: 'home',
-            label: '首页',
-            icon: <HomeOutlined/>
+            label:
+                <Link href={{
+                    pathname: '/list/[type]',
+                    query: {type: '1'},
+                }}>
+                    <a>技术</a>
+                </Link>,
+            key: 'item-1',
+            icon: <BulbOutlined style={{fontSize: '1rem'}}/>
         },
         {
-            label: '菜单项二',
+            label:
+                <Link href={{
+                    pathname: '/list/[type]',
+                    query: {type: '2'},
+                }}>
+                    <a>摄影</a>
+                </Link>,
             key: 'item-2',
-            icon: <HomeOutlined/>
+            icon: <CameraOutlined style={{fontSize: '1rem'}}/>
         },
         {
-            label: '菜单项三',
+            label:
+                <Link href={{
+                    pathname: '/list/[type]',
+                    query: {type: '3'},
+                }}>
+                    <a>生活</a>
+                </Link>,
             key: 'item-3',
-            icon: <HomeOutlined/>
-        }
+            icon: <SmileOutlined style={{fontSize: '1rem'}}/>
+        },
     ];
 
     return (
         <div className={classes.header}>
             <Row type="flex" justify="center">
                 <Col xs={24} sm={24} md={10} lg={15} xl={12}>
-                    <span className={classes.logo}>特拉戈</span>
-                    <span className={classes.text}>Tragoedia</span>
+                    <div className={classes.info}>
+                        <Link href={{
+                            pathname: '/',
+                        }}>
+                            <a>
+                                <span className={classes.logo}>特拉戈</span>
+                                <span className={classes.text}>Tragoedia</span>
+                            </a>
+                        </Link>
+                    </div>
                 </Col>
                 <Col xs={0} sm={0} md={14} lg={8} xl={6}>
-                        <Menu mode="horizontal" className={classes.menu} items={items}/>
+                    <Menu
+                        mode="horizontal"
+                        className={classes.menu}
+                        items={items}
+                    />
                 </Col>
             </Row>
         </div>

@@ -1,0 +1,42 @@
+.list {
+
+}
+
+.item {
+    padding: 0;
+}
+
+.left {
+    padding: 1rem;
+}
+
+.right {
+    padding: 1rem;
+}
+
+.main {
+
+}
+
+.main:hover {
+    background-color: #f6f6f6;
+    border-radius: .3rem;
+}
+
+.title {
+    font-size: 1.3rem;
+    color: #1e90ff;
+    padding: 0 0.5rem;
+}
+
+.introduce {
+    color: #777;
+    padding: .5rem;
+}
+
+.icon {
+    margin-left: .5rem;
+    padding: .5rem 0;
+    color: #AAA;
+}
+
