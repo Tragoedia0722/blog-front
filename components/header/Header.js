@@ -9,8 +9,8 @@ const Header = () => {
         {
             label:
                 <Link href={{
-                    pathname: '/list/[type]',
-                    query: {type: '1'},
+                    pathname: '/[typeKey]/[page]',
+                    query: {typeKey: 'tech', page: 1},
                 }}>
                     <a>技术</a>
                 </Link>,
@@ -20,8 +20,8 @@ const Header = () => {
         {
             label:
                 <Link href={{
-                    pathname: '/list/[type]',
-                    query: {type: '2'},
+                    pathname: '/[typeKey]/[page]',
+                    query: {typeKey: 'photo', page: 1},
                 }}>
                     <a>摄影</a>
                 </Link>,
@@ -31,8 +31,8 @@ const Header = () => {
         {
             label:
                 <Link href={{
-                    pathname: '/list/[type]',
-                    query: {type: '3'},
+                    pathname: '/[typeKey]/[page]',
+                    query: {typeKey: 'life', page: 1},
                 }}>
                     <a>生活</a>
                 </Link>,

@@ -8,7 +8,22 @@ import {useRouter} from "next/router";
 const ArticleList = (props) => {
     const router = useRouter()
     const change = (page) => {
-        router.push("?page=" + page).then()
+
+        if (props.data.data.typeKey === undefined) {
+            router.push(
+                {
+                    pathname: '/',
+                    query: {page: page},
+                }
+            ).then()
+        } else {
+            router.push(
+                {
+                    pathname: '/[typeKey]/[page]',
+                    query: {typeKey: props.data.data.typeKey, page: page},
+                }
+            ).then()
+        }
     }
 
     return (
@@ -47,7 +62,7 @@ const ArticleList = (props) => {
                                     </span>
                                     &nbsp;&nbsp;
                                     <span>
-                                        <FolderOutlined/>&nbsp;{item.type}
+                                        <FolderOutlined/>&nbsp;{item.typeName}
                                     </span>
                                 </div>
 

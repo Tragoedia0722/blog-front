@@ -15,10 +15,11 @@ const DetailPage = ({data}) => {
 
     const left = (
         <Detail
-            title={data.data.title}
-            date={data.data.date}
-            type={data.data.type}
-            content={data.data.content}
+            title={data.data.article.title}
+            date={data.data.article.date}
+            typeKey={data.data.typeKey}
+            typeName={data.data.article.typeName}
+            content={data.data.article.content}
         />
     )
 
@@ -27,7 +28,7 @@ const DetailPage = ({data}) => {
             <Author/>
             <Advert/>
             <DetailNav content={
-                data.data.content
+                data.data.article.content
             }/>
         </>
     )
@@ -35,7 +36,7 @@ const DetailPage = ({data}) => {
     return (
         <>
             <Head>
-                <title>{data.data.title}</title>
+                <title>{data.data.article.title}</title>
             </Head>
 
             <Header/>

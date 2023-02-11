@@ -20,3 +20,15 @@
     margin-left: .5rem;
     margin-right: .5rem;
 }
+
+.github:hover {
+    background-color: #333333;
+}
+
+.qq:hover {
+    background-color: dodgerblue;
+}
+
+.wechat:hover {
+    background-color: green;
+}
