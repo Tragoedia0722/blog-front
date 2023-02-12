@@ -52,7 +52,7 @@ const ArticleList = (props) => {
                                         pathname: '/detail/[id]',
                                         query: {id: item.id},
                                     }}>
-                                        <a>{item.title}</a>
+                                        {item.title}
                                     </Link>
                                 </div>
 

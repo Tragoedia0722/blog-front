@@ -12,7 +12,7 @@ const Header = () => {
                     pathname: '/[typeKey]/[page]',
                     query: {typeKey: 'tech', page: 1},
                 }}>
-                    <a>技术</a>
+                    技术
                 </Link>,
             key: 'item-1',
             icon: <BulbOutlined style={{fontSize: '1rem'}}/>
@@ -23,7 +23,7 @@ const Header = () => {
                     pathname: '/[typeKey]/[page]',
                     query: {typeKey: 'photo', page: 1},
                 }}>
-                    <a>摄影</a>
+                    摄影
                 </Link>,
             key: 'item-2',
             icon: <CameraOutlined style={{fontSize: '1rem'}}/>
@@ -34,7 +34,7 @@ const Header = () => {
                     pathname: '/[typeKey]/[page]',
                     query: {typeKey: 'life', page: 1},
                 }}>
-                    <a>生活</a>
+                    生活
                 </Link>,
             key: 'item-3',
             icon: <SmileOutlined style={{fontSize: '1rem'}}/>
@@ -49,10 +49,8 @@ const Header = () => {
                         <Link href={{
                             pathname: '/',
                         }}>
-                            <a>
-                                <span className={classes.logo}>特拉戈</span>
-                                <span className={classes.text}>Tragoedia</span>
-                            </a>
+                            <span className={classes.logo}>特拉戈</span>
+                            <span className={classes.text}>Tragoedia</span>
                         </Link>
                     </div>
                 </Col>

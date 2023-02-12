@@ -18,7 +18,7 @@ const Bread = (props) => {
                             pathname: '/[typeKey]/[page]',
                             query: {typeKey: props.typeKey, page: 1},
                         }}>
-                            <a>{props.typeName}</a>
+                            {props.typeName}
                         </Link>
                     </Breadcrumb.Item>
 
