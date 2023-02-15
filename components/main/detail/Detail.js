@@ -1,9 +1,19 @@
 import React from 'react';
 import classes from "./Detail.module.css";
-import ReactMarkDown from "react-markdown";
+import {marked} from "marked";
 import Bread from "../bread/Bread";
 
 const Detail = (props) => {
+    marked.setOptions({
+        render: new marked.Renderer(),
+        gfm: true,
+        pedantic: false,
+        sanitize: false,
+        tables: true,
+        breaks: false,
+        smartLists: true,
+        smartypants: false
+    })
 
     return (
         <>
@@ -20,11 +30,7 @@ const Detail = (props) => {
                 <span>{props.date}</span>
                 <span># {props.typeName}</span>
             </div>
-            <div className={classes.content}>
-                <ReactMarkDown skipHtml={false}>
-                    {props.content}
-                </ReactMarkDown>
-            </div>
+            <div className={classes.content} dangerouslySetInnerHTML={{__html: marked(props.content)}}/>
         </>
     );
 };

@@ -79,7 +79,7 @@ const ArticleList = (props) => {
             <Row type={"flex"} justify="center">
                 <Pagination
                     onChange={change}
-                    defaultCurrent={1}
+                    defaultCurrent={props.current}
                     total={props.data.data.total}
                     pageSize={5}
                 />

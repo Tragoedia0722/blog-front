@@ -14,7 +14,10 @@ const Home = (props) => {
     // Main左侧界面
     const left = (
         <>
-            <ArticleList data={props.data}/>
+            <ArticleList
+                data={props.data}
+                current={props.current}
+            />
         </>
     )
 
@@ -49,6 +52,7 @@ export async function getServerSideProps(context) {
     const {data} = await axios.get(servicePath.articles + context.query.page);
     return {
         props: {
+            current: context.query.page,
             data
         },
     }

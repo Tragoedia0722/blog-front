@@ -1630,6 +1630,11 @@
     "prop-types" "^15.7.2"
     "react" "^16.12.0"
 
+"marked@^4.2.12":
+  "integrity" "sha512-yr8hSKa3Fv4D3jdZmtMMPghgVt6TWbk86WQaWhDloQjRSQhMMYCAro7jP7VDJrjjdV8pxVxMssXS8B8Y5DZ5aw=="
+  "resolved" "https://registry.npmmirror.com/marked/-/marked-4.2.12.tgz"
+  "version" "4.2.12"
+
 "mdast-util-definitions@^5.0.0":
   "integrity" "sha512-8SVPMuHqlPME/z3gqVwWY4zVXn8lqKv/pAhC57FuJ40ImXyBpmO5ukh98zB2v7Blql2FiHjHv9LVztSIqjY+MA=="
   "resolved" "https://registry.npmmirror.com/mdast-util-definitions/-/mdast-util-definitions-5.1.2.tgz"
