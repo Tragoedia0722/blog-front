@@ -1,6 +1,8 @@
 import React from 'react';
 import classes from "./Detail.module.css";
 import {marked} from "marked";
+import hljs from "highlight.js";
+import 'highlight.js/styles/github-dark.css'
 import Bread from "../bread/Bread";
 
 const Detail = (props) => {
@@ -10,9 +12,12 @@ const Detail = (props) => {
         pedantic: false,
         sanitize: false,
         tables: true,
-        breaks: false,
+        breaks: true,
         smartLists: true,
-        smartypants: false
+        smartypants: false,
+        highlight: function (code) {
+            return hljs.highlightAuto(code).value
+        }
     })
 
     return (
